@@ -44,6 +44,6 @@ class GuessNumberTest < Minitest::Test
       @guesser.number_guessed? 20
     end
 
-    assert_match(/No more turns! You cannot play anymore/, error.message )
+    assert_match(/No more turns! You cannot play anymore/, error.message)
   end
 end

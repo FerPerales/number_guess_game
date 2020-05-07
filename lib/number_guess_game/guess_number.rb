@@ -1,5 +1,3 @@
-require_relative 'guess_result'
-require_relative 'errors/no_more_turns_error'
 # GuessNumber
 #
 module NumberGuessGame

@@ -1,7 +1,3 @@
-require_relative 'guess_number'
-require_relative 'errors/no_more_turns_error'
-
-
 module NumberGuessGame
   class Runner
     def self.start
@@ -21,4 +17,3 @@ module NumberGuessGame
     end
   end
 end
-
