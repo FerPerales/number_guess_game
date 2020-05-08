@@ -8,6 +8,17 @@ class GuessNumberTest < Minitest::Test
     @guesser = NumberGuessGame::GuessNumber.new(10, @max_guesses)
   end
 
+  def test_last_error_message_says_game_is_over
+    guess_response = @guesser.number_guessed? 9
+    assert_match(/Try again. My number is greater than /, guess_response.message)
+
+    guess_response = @guesser.number_guessed? 9
+    assert_match(/Try again. My number is greater than /, guess_response.message)
+
+    guess_response = @guesser.number_guessed? 9
+    assert_match(/You lost! The number was /, guess_response.message)
+  end
+
   def test_can_play_three_times_if_i_dont_guess_the_number
     @guesser.number_guessed? 2
     @guesser.number_guessed? 3

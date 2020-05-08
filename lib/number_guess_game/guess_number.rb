@@ -18,6 +18,7 @@ module NumberGuessGame
       message = 'You won!' if number_guessed
       message = "Try again. My number is lesser than #{guess}" if guess.to_i > @number_to_guess
       @tries += 1
+      message = "You lost! The number was #{@number_to_guess}" if !more_turns? && !number_guessed
       GuessResult.new(number_guessed, message)
     end
 
